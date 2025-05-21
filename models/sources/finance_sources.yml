@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: finance
+    database: raw
+    schema: finance
+    tables:
+      - name: orders
+      - name: order_items
+      - name: customers
+      - name: products

@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: marketing
+    database: raw
+    schema: marketing
+    tables:
+      - name: campaigns
+      - name: leads

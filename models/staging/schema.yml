@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "Staging model for orders"
+    columns:
+      - name: order_id
+        tests: [not_null, unique]
+
+  - name: stg_order_items
+    description: "Staging model for order items"
+    columns:
+      - name: order_item_id
+        tests: [not_null, unique]
+
+  - name: stg_customers
+    description: "Staging model for customers"
+    columns:
+      - name: customer_id
+        tests: [not_null, unique]
+
+  - name: stg_products
+    description: "Staging model for products"
+    columns:
+      - name: product_id
+        tests: [not_null, unique]
+
+  - name: stg_campaigns
+    description: "Staging model for campaigns"
+    columns:
+      - name: campaign_id
+        tests: [not_null, unique]
+
+  - name: stg_leads
+    description: "Staging model for leads"
+    columns:
+      - name: lead_id
+        tests: [not_null, unique]

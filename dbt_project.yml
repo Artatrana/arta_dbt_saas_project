@@ -1,0 +1,27 @@
+name: arta_dbt_saas_project
+version: '1.0'
+profile: dbt_snowflake_profile
+config-version: 2
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+snapshot-paths: ["snapshots"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+
+models:
+  arta_dbt_saas_project:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: ephemeral
+    marts:
+      +materialized: table
+
+seeds:
+  arta_dbt_saas_project:
+    finance:
+      +schema: finance
+    marketing:
+      +schema: marketing
+

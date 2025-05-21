@@ -1,0 +1,4 @@
+id,campaign_id,lead_date,lead_status,customer_id
+201,1,2023-06-05,converted,1
+202,1,2023-06-10,unqualified,2
+203,2,2023-07-10,converted,3

@@ -1,0 +1,15 @@
+name: dbt Run
+on: [push]
+
+jobs:
+  run-dbt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: pip install -r requirements.txt
+      - run: dbt deps
+      - run: dbt run
+      - run: dbt test
